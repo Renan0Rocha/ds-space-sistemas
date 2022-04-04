@@ -1,0 +1,52 @@
+﻿<Window x:Class="AtividadeDS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AtividadeDS"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="450" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FF9C1FC9" Offset="1"/>
+            <GradientStop Color="#FF2E093C" Offset="0.021"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Margin="5,5,5,5">
+        <Grid.LayoutTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform AngleX="0"/>
+                <RotateTransform/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.LayoutTransform>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFAEAEAE"/>
+                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="White"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" RenderTransformOrigin="0.5,0.5">
+            <Label Content="Login" HorizontalAlignment="Center" Margin="0 20 0 0" FontSize="35" Foreground="Black" FontWeight="Bold" FontFamily="Arial Rounded MT Bold" Background="{x:Null}"/>
+        </StackPanel>
+        <Label Content="Usuário:" FontSize="15" Margin="110,166,146,-101" Foreground="Black"/>
+        <TextBox x:Name="txtUsuario" Margin="110,202,110,-126" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" BorderThickness="0,0,0,1"/>
+
+        <Label Content="Senha:" FontSize="15" Margin="110,253,146,-188" Foreground="Black"/>
+        <!-- <TextBox Margin="110,292,110,-219" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" TextAlignment="Left"/> -->
+        <PasswordBox x:Name="pswSenha" PasswordChar="*" Margin="110,288,110,-210" BorderThickness="0,0,0,1" Password=""/>
+
+        <Button x:Name="btnEntrarLogin" Content="Entrar" Margin="170,330,174,-257" Background="#FF595DFF" BorderThickness="0,0,0,1" Click="btnEntrarLogin_Click"/>
+        <Label Content="Novo Usuário?" Margin="129,380,206,-307"/>
+        <Button x:Name="btnCadastrarUsuario" Content="Cadastrar-se" Foreground="Blue" Margin="220,382,132,-305" Background="#FFF6E9E9" Click="btnCadastrarUsuario_Click"/>
+
+    </Grid>
+</Window>
